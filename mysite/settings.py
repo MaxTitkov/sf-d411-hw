@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'f@m##j^kjk1so_=4xy860r@_jhb&!v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['sf-d411-hw.herokuapp.com']
+ALLOWED_HOSTS = ['sf-d411-hw.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -138,3 +138,5 @@ DATABASES['default'].update(db_from_env)
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
